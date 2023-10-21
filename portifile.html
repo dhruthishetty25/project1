@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Personal Portofolio website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <ul id="side menu"> 
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portofolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav> 
+                <div class="header-text">
+                    <h1>Hi ,<br> I'am<spam> Dhruthi Shetty</spam></h1>
+                </div>
+            </div>
+        </div>
+        <!--....about.....-->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col1">
+                        <img src="Photo_1683711177105.jpg">
+                    </div>
+                    <div class="about-col2">
+                        <h1 class="subtitle">About Me</h1>
+                        <br>
+                        <p>I am Dhruthi Shetty.I am from Mangalore,Karnataka,India.
+                             I am currently persuing engineering in Srinivas Institute of Technology,valachil,Mangalore.
+                            My specilization is Artificial Intelligence and Data Science. I completedmy Pre-University in 
+                            Mount carmel College. 
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"onclick="opentab('education')">Education</p>
+                            <p class="tab-links"onclick="opentab('hobbies')">Hobbies</p>
+                        </div>
+                        <div class="tab-contents active-tab"id="skills">
+                            <ul>
+                                <li><span>Pyhton</span><br>Python for Data Science</li>
+                                <li><span>Web development</span><br> Web App development</li>
+                                <li><span>Machine Learning</span><br>Machine Learning in Python</li>
+                                <li><span>Artificial Intelligence</span><br>Artificial Intelligence and Data Science</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents"id="education">
+                            <ul>
+                                <li><span>School</span><br>UAS Campus School,Bangalore</li>
+                                <li><span>Pre-University</span><br>Mount carmel PU College</li>
+                                <li><span>PG</span><br>Srinivas Institute of Technology</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents"id="hobbies">
+                            <ul>
+                                <li><span>Art</span><br>Drawing,Painting ,Potrait</li>
+                                <li><span>Sport</span><br> Handball,volleyball</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--.......portofolio....-->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="subtitle">Portfolio</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="car.jpg">
+                    
+                    
+                    </div>
+                    <div class="work1">
+                    <div class="layer">
+                        <h3>Car Price Prediction</h3>
+                        <br>
+                        <p>A Machine Learning Project that uses 
+                            Random Forest Regressor model to predict used cars price based on some
+                             attributes such as kilometers driven, age, number of previous owners etc.</p>
+                             <a href="#"><i class="<script src="https://kit.fontawesome.com/4592d7cd38.js" crossorigin="anonymous"></script>"></i></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+<!--------contact------>
+<div id="contact">
+
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i>memunnu25@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9334232221</p>
+                <div class="social-icons">
+                </div>
+               
+                <a href="my-cv.pdf" download class="btn btn2">Dowload CV</a>
+            </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your messag"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+        
+        <script>
+            var tablinks =document.getElementsByClassName("tab-links");
+            var tabcontents =document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for (tablink of  tablinks){
+                    tablink.classList.remove("active-link");
+                }
+            
+
+                for (tabcontent of  tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+
+        </script>
+        <script>
+            var sidemenu=document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right="0";
+            }
+            function closemenu(){
+                sidemenu.style.right="200px";
+            }
+        </script>
+
+    </body>
+</html>
